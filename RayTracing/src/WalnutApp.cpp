@@ -15,6 +15,7 @@ class ExampleLayer : public Walnut::Layer
 public:
 	ExampleLayer()
 		: m_Camera(45.0f, 0.1f, 100.0f) {
+		/*
 		for (int i = 0; i < m_Scene.numSpheres; i++) {
 			Sphere sphere;
 			sphere.Position = { 0.0f, 0.0f, 0.0f };
@@ -22,6 +23,23 @@ public:
 			sphere.Albedo = { 1.0f, 0.0f, 1.0f };
 			m_Scene.Spheres.push_back(sphere);
 		}
+		*/
+			{
+				Sphere sphere;
+				sphere.Position = { 0.0f, 0.0f, 0.0f };
+				sphere.Radius = 0.5f;
+				sphere.Albedo = { 1.0f, 0.388f, 0.0f };
+				m_Scene.Spheres.push_back(sphere);
+			}
+
+			{
+				Sphere sphere;
+				sphere.Position = { 0.0f, -5.7f, 0.0f };
+				sphere.Radius = 5.2f;
+				sphere.Albedo = { 0.447f, 0.0588f, 1.0f };
+				m_Scene.Spheres.push_back(sphere);
+			}
+
 	}
 
 	virtual void OnUpdate(float ts) override
@@ -39,8 +57,10 @@ public:
 		ImGui::End();
 
 		ImGui::Begin("Scene");
+		/*
 		ImGui::InputInt("No. of Spheres", &m_Scene.numSpheres);
 		ImGui::Separator();
+		*/
 
 		ImGui::DragFloat3("Light Direction", glm::value_ptr(m_Scene.lights.LightDir), 0.1f);
 		ImGui::Separator();
