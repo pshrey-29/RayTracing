@@ -1,40 +1,18 @@
-Language: C++  
-GUI Library: ImGui  
+**Language**: C++  
+**GUI Library**: ImGui  
 
-Implemented Features:  
-Camera System:  
--Ability to move the camera position, orientation and field of view.  
--Support for orthographic and perspective projection.  
--Camera rays generated based on the projection type and view matrix.  
+This project is a simple raytracer implemented in C++ that utilizes the ImGui library for creating a user interface. The raytracer supports basic features such as diffuse reflection, emission, and an interactive camera.
 
-Object Support:  
--Support for multiple objects in the scene.  
--Signed Distance Function (SDF) used for defining the geometry of objects.  
--No support for polygonal meshes yet.  
 
-Material Properties:  
--Roughness of materials implemented.  
--Reflection of materials implemented.  
+**Camera Controls**:
+  - Use the mouse to adjust the camera's view direction.
+  - Keyboard controls (right-click and press):
+    - **W, A, S, D**: Move the camera forward, left, backward, and right, respectively.
+    - **Q, E**: Move the camera up and down, respectively.
 
-<img width="492" alt="09_accumulated data 1" src="https://user-images.githubusercontent.com/83825007/225366076-e97cefc9-c74c-434c-ba8b-58671bb43aa0.png">
-<img width="492" alt="09_accumulated data 2" src="https://user-images.githubusercontent.com/83825007/225366095-dc4aa26b-4b09-4888-8095-6946a62f0370.png">
-<img width="492" alt="09_accumulated data 3" src="https://user-images.githubusercontent.com/83825007/225366108-fcdda3e7-f2eb-45ac-b0bb-0f77f14e3c27.png">
+**Some Renders**:
 
-*Upcoming Features:  
-Multithreading:   
--Implementing multithreading to speed up the rendering process.  
--Divide the image into tiles and assign each tile to a separate thread.  
-
-Additional Material Properties:  
--Implementing additional material properties like transparency, refraction and emissivity.  
-
-Optimizations:  
--Implementing optimizations to speed up the raytracing process.  
--BVH (Bounding Volume Hierarchy) to accelerate ray-object intersection tests.  
-
-Polygonal Mesh Support:  
--Implementing support for polygonal meshes.  
--Loading polygonal mesh data from file formats like OBJ or FBX.  
-
-Additional Lighting Techniques:  
--Implementing additional lighting techniques like ambient occlusion and indirect lighting.  
+<img width="400" alt="10_improvedDiffuse2" src="https://github.com/pshrey-29/RayTracing/assets/83825007/1b4ab33c-983c-4333-bbf8-89137207a032">
+<img width="400" alt="11_Emission1" src="https://github.com/pshrey-29/RayTracing/assets/83825007/45b97a84-8504-416e-b47d-3d5faf80dc55">
+<img width="400" alt="11_Emission2" src="https://github.com/pshrey-29/RayTracing/assets/83825007/c6a08eae-8324-43f1-9173-35756b2e7014">
+<img width="400" alt="10_improvedDiffuse" src="https://github.com/pshrey-29/RayTracing/assets/83825007/be460f8f-6065-4a19-b25c-f769272d80a7">
